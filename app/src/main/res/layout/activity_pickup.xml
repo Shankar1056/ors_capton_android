@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:sothree="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/sliding_layout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="bottom"
+	sothree:umanoAnchorPoint="0"
+	sothree:umanoClipPanel="true"
+	sothree:umanoInitialState="hidden"
+	sothree:umanoPanelHeight="200dp"
+	sothree:umanoShadowHeight="4dp">
+
+	<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/white"
+		android:orientation="vertical"
+		tools:context="com.bigappcompany.ors_captain.activity.PickupActivity"
+		tools:ignore="MissingPrefix">
+
+		<include layout="@layout/toolbar"/>
+
+		<android.support.v7.widget.CardView
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_marginBottom="@dimen/standard"
+			android:layout_marginEnd="@dimen/standard"
+			android:layout_marginStart="@dimen/standard"
+			android:layout_marginTop="@dimen/thick"
+			android:layout_weight="1"
+			app:cardElevation="@dimen/thin"
+			app:cardUseCompatPadding="true">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/tv_edit"
+					fontPath="fonts/lato-bold.ttf"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:drawableEnd="@drawable/ic_edit_black_24dp"
+					android:padding="@dimen/standard"
+					android:text="@string/items"
+					android:textColor="@color/black"
+					android:textSize="@dimen/text_medium"/>
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="0.5dp"
+					android:background="@color/grey_e0e0e0"/>
+
+				<android.support.v7.widget.RecyclerView
+					android:id="@+id/rv_pickup_items"
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="1"
+					app:layoutManager="LinearLayoutManager"
+					tools:listitem="@layout/item_pickup"/>
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="0.5dp"
+					android:background="@color/grey_e0e0e0"/>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="@dimen/standard"
+						android:text="@string/total"
+						android:textColor="@color/grey_282828"
+						android:textSize="@dimen/text_medium"/>
+
+					<TextView
+						android:id="@+id/tv_total"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="end"
+						android:padding="@dimen/standard"
+						android:textColor="@color/grey_282828"
+						android:textSize="@dimen/text_medium"
+						tools:text="\u20B9 1000"/>
+				</LinearLayout>
+			</LinearLayout>
+		</android.support.v7.widget.CardView>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/colorPrimary"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/tv_pay_cash"
+				fontPath="fonts/lato-bold.ttf"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:padding="@dimen/standard"
+				android:text="@string/pay_cash"
+				android:textColor="@color/white"
+				android:textSize="@dimen/text_medium"/>
+
+			<View
+				android:layout_width="0.5dp"
+				android:layout_height="match_parent"
+				android:layout_marginBottom="@dimen/thin"
+				android:layout_marginTop="@dimen/thin"
+				android:background="@color/white"/>
+
+			<TextView
+				android:id="@+id/tv_pay_by_wallet"
+				fontPath="fonts/lato-bold.ttf"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:padding="@dimen/standard"
+				android:text="@string/pay_by_wallet"
+				android:textColor="@color/white"
+				android:textSize="@dimen/text_medium"/>
+		</LinearLayout>
+	</LinearLayout>
+
+	<include layout="@layout/slide_up_panel"/>
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

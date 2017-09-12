@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white"
+	tools:context="com.bigappcompany.ors_captain.activity.ScheduleActivity"
+	tools:ignore="MissingPrefix">
+
+	<include
+		android:id="@+id/appbar"
+		layout="@layout/toolbar"/>
+
+	<android.support.v4.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/btn_self_assign"
+		android:layout_below="@id/appbar"
+		android:layout_marginEnd="@dimen/narrow"
+		android:layout_marginStart="@dimen/narrow"
+		android:fillViewport="true">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/narrow"
+			android:orientation="vertical">
+
+			<android.support.v7.widget.CardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardElevation="@dimen/thin"
+				app:cardUseCompatPadding="true">
+
+				<android.support.v7.widget.RecyclerView
+					android:id="@+id/rv_pickup_items"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					app:layoutManager="GridLayoutManager"
+					app:spanCount="2"
+					tools:listitem="@layout/item_expected_schedule_items"/>
+			</android.support.v7.widget.CardView>
+
+			<android.support.v7.widget.CardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardElevation="@dimen/thin"
+				app:cardUseCompatPadding="true">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<TextView
+						fontPath="fonts/lato-bold.ttf"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:paddingBottom="@dimen/thick"
+						android:paddingEnd="@dimen/narrow"
+						android:paddingStart="@dimen/narrow"
+						android:paddingTop="@dimen/thick"
+						android:text="@string/schedule_status"
+						android:textColor="@color/black"/>
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="0.5dp"
+						android:background="@color/grey_e2e2e2"/>
+
+					<TextView
+						android:id="@+id/tv_schedule_status"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:drawablePadding="@dimen/narrow"
+						android:paddingBottom="@dimen/thick"
+						android:paddingEnd="@dimen/narrow"
+						android:paddingStart="@dimen/narrow"
+						android:paddingTop="@dimen/thick"
+						android:textSize="@dimen/text_small"
+						tools:text="Pending"/>
+				</LinearLayout>
+			</android.support.v7.widget.CardView>
+
+			<android.support.v7.widget.CardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardElevation="@dimen/thin"
+				app:cardUseCompatPadding="true">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/tv_label_address"
+						fontPath="fonts/lato-bold.ttf"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:drawableEnd="@drawable/ic_location_green_15dp"
+						android:paddingBottom="@dimen/thick"
+						android:paddingEnd="@dimen/narrow"
+						android:paddingStart="@dimen/narrow"
+						android:paddingTop="@dimen/thick"
+						android:text="@string/address"
+						android:textColor="@color/black"/>
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="0.5dp"
+						android:background="@color/grey_e2e2e2"/>
+
+					<TextView
+						android:id="@+id/tv_address"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:paddingBottom="@dimen/thick"
+						android:paddingEnd="@dimen/narrow"
+						android:paddingStart="@dimen/narrow"
+						android:paddingTop="@dimen/thick"
+						android:textSize="@dimen/text_small"
+						tools:text="Near M S Ramiah Hospital, 80 ft road, dollar colony ashwathnagar sanjay, Bangalore-560094"/>
+				</LinearLayout>
+			</android.support.v7.widget.CardView>
+
+			<android.support.v7.widget.CardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardElevation="@dimen/thin"
+				app:cardUseCompatPadding="true">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<TextView
+						fontPath="fonts/lato-bold.ttf"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:paddingBottom="@dimen/thick"
+						android:paddingEnd="@dimen/narrow"
+						android:paddingStart="@dimen/narrow"
+						android:paddingTop="@dimen/thick"
+						android:text="@string/date"
+						android:textColor="@color/black"/>
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="0.5dp"
+						android:background="@color/grey_e2e2e2"/>
+
+					<TextView
+						android:id="@+id/tv_date"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:paddingBottom="@dimen/thick"
+						android:paddingEnd="@dimen/narrow"
+						android:paddingStart="@dimen/narrow"
+						android:paddingTop="@dimen/thick"
+						android:textSize="@dimen/text_small"
+						tools:text="15 May 2017 8:00pm - 9:00pm"/>
+				</LinearLayout>
+			</android.support.v7.widget.CardView>
+
+			<android.support.v7.widget.CardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/standard"
+				app:cardElevation="@dimen/thin"
+				app:cardUseCompatPadding="true">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<TextView
+						fontPath="fonts/lato-bold.ttf"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:paddingBottom="@dimen/thick"
+						android:paddingEnd="@dimen/narrow"
+						android:paddingStart="@dimen/narrow"
+						android:paddingTop="@dimen/thick"
+						android:text="@string/time"
+						android:textColor="@color/black"/>
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="0.5dp"
+						android:background="@color/grey_e2e2e2"/>
+
+					<TextView
+						android:id="@+id/tv_time"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:paddingBottom="@dimen/thick"
+						android:paddingEnd="@dimen/narrow"
+						android:paddingStart="@dimen/narrow"
+						android:paddingTop="@dimen/thick"
+						android:textSize="@dimen/text_small"
+						tools:text="15 May 2017 8:00pm - 9:00pm"/>
+				</LinearLayout>
+			</android.support.v7.widget.CardView>
+		</LinearLayout>
+
+	</android.support.v4.widget.NestedScrollView>
+
+	<android.support.design.widget.FloatingActionButton
+		android:id="@+id/fab_call"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/btn_self_assign"
+		android:layout_alignParentEnd="true"
+		android:layout_margin="@dimen/standard"
+		android:src="@drawable/ic_phone_white_24dp"/>
+
+	<android.support.v7.widget.AppCompatButton
+		android:id="@id/btn_self_assign"
+		fontPath="fonts/lato-bold.ttf"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:background="@color/colorPrimary"
+		android:padding="@dimen/standard"
+		android:text="@string/assign_to_me"
+		android:textAllCaps="false"
+		android:textColor="@color/white"
+		android:textSize="@dimen/text_medium"/>
+</RelativeLayout>

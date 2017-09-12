@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="colorPrimary">#009746</color>
+	<color name="colorPrimaryDark">#007938</color>
+	<color name="colorAccent">#009746</color>
+
+	<!-- Shades of Grey -->
+	<color name="white">#FFFFFF</color>
+	<color name="grey_f7f7f7">#F7F7F7</color>
+	<color name="grey_eeeeee">#EEEEEE</color>
+	<color name="grey_545454">#545454</color>
+	<color name="grey_2d2d2d">#2D2D2D</color>
+	<color name="black">#000000</color>
+	<color name="transparent">#00000000</color>
+	<color name="grey_cccccc">#CCCCCC</color>
+
+	<color name="green">#009846</color>
+	<color name="green_stroke">#E5F5EB</color>
+	<color name="maroon">#E31E25</color>
+	<color name="maroon_transparent">#88E31E25</color>
+	<color name="grey_aaaaaa">#AAAAAA</color>
+	<color name="walletPrimary">#FFAB00</color>
+	<color name="walletPrimaryDark">#CC8800</color>
+	<color name="grey_e0e0e0">#E0E0E0</color>
+
+	<color name="darkGreen">#007A39</color>
+	<color name="grey_848484">#848484</color>
+	<color name="light_blue">#255fff</color>
+
+	<!-- schedule status colors -->
+	<color name="accepted">@color/green</color>
+	<color name="cancelled">@color/maroon</color>
+	<color name="pending">@color/walletPrimary</color>
+	<color name="ontheway">#FF8500</color>
+	<color name="completed">@color/green</color>
+	<color name="navi_blue">#2e3192</color>
+	<color name="bg_fb">#3B5998</color>
+	<color name="bg_message">#4A148C</color>
+	<color name="bg_whats_app">#4DC247</color>
+	<color name="bg_email">#4D5054</color>
+	<color name="bg_twitter">#55ACEE</color>
+	<color name="grey_ebebeb">#EBEBEB</color>
+	<color name="grey_282828">#282828</color>
+	<color name="transparent_green">#33009746</color>
+	<color name="transparent_white">#AAFFFFFF</color>
+</resources>

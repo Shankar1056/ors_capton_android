@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center_horizontal"
+	android:orientation="vertical"
+	tools:ignore="MissingPrefix">
+
+	<TextView
+		android:id="@+id/tv_title"
+		fontPath="fonts/lato-bold.ttf"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/huge"
+		android:text="@string/sign_up_less_than"
+		android:textAllCaps="true"
+		android:textColor="@color/black"
+		android:textSize="@dimen/text_title"/>
+
+	<View
+		android:layout_width="200dp"
+		android:layout_height="0.5dp"
+		android:layout_marginTop="@dimen/standard"
+		android:background="@color/black"/>
+
+	<TextView
+		android:id="@+id/tv_desc"
+		fontPath="fonts/lato-bold.ttf"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:padding="@dimen/medium"
+		android:text="@string/hint_sign_up"
+		android:textColor="@color/grey_545454"
+		android:textSize="@dimen/text_medium"/>
+
+	<ImageView
+		android:id="@+id/iv_image"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:contentDescription="@null"
+		android:src="@drawable/art_connect_pickup_268dp"/>
+</LinearLayout>

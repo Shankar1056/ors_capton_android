@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white"
+	android:gravity="center"
+	android:orientation="vertical"
+	android:paddingEnd="@dimen/medium"
+	android:paddingStart="@dimen/medium"
+	tools:context="com.bigappcompany.ors_captain.activity.AuthActivity"
+	tools:ignore="MissingPrefix">
+
+	<TextView
+		fontPath="fonts/lato-bold.ttf"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/welcome_to"
+		android:textColor="@color/black"
+		android:textSize="@dimen/text_big"/>
+
+	<View
+		android:layout_width="94dp"
+		android:layout_height="1dp"
+		android:layout_marginTop="@dimen/thin"
+		android:background="@color/black"/>
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/medium"
+		android:layout_marginTop="@dimen/standard"
+		android:contentDescription="@null"
+		android:src="@drawable/art_logo_maroon_135dp"/>
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:contentDescription="@null"
+		android:src="@drawable/art_recycling_green_420dp"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/medium"
+		android:orientation="horizontal">
+
+		<android.support.v7.widget.AppCompatEditText
+			fontPath="fonts/lato-bold.ttf"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:clickable="false"
+			android:focusable="false"
+			android:text="@string/indian_code"
+			android:textColor="@color/black"/>
+
+		<android.support.v7.widget.AppCompatEditText
+			android:id="@+id/et_mobile"
+			fontPath="fonts/lato-bold.ttf"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/medium"
+			android:hint="@string/enter_mobile_here"
+			android:inputType="phone"
+			android:paddingBottom="@dimen/thick"
+			android:paddingEnd="@dimen/narrow"
+			android:paddingStart="@dimen/narrow"
+			android:paddingTop="@dimen/thick"
+			android:textColor="@color/black"/>
+	</LinearLayout>
+
+	<android.support.v7.widget.AppCompatButton
+		android:id="@+id/btn_verify"
+		fontPath="fonts/lato-bold.ttf"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/medium"
+		android:background="@drawable/draw_rectangle_green"
+		android:text="@string/verify"
+		android:textAllCaps="false"
+		android:textColor="@color/white"/>
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginEnd="@dimen/standard"
+	android:layout_marginStart="@dimen/standard"
+	android:layout_marginTop="@dimen/thick"
+	app:cardBackgroundColor="@color/white"
+	app:cardElevation="@dimen/thin"
+	app:contentPaddingBottom="@dimen/thick"
+	app:contentPaddingLeft="@dimen/standard"
+	app:contentPaddingRight="@dimen/standard"
+	app:contentPaddingTop="@dimen/thick"
+	tools:ignore="MissingPrefix">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/tv_time_start"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				tools:text="8:00pm"/>
+
+			<View
+				android:layout_width="@dimen/standard"
+				android:layout_height="0.5dp"
+				android:layout_marginTop="@dimen/thick"
+				android:background="@color/black"/>
+
+			<TextView
+				android:id="@+id/tv_time_end"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/thick"
+				tools:text="9:00pm"/>
+		</LinearLayout>
+
+		<View
+			android:layout_width="0.8dp"
+			android:layout_height="match_parent"
+			android:layout_marginEnd="@dimen/standard"
+			android:layout_marginStart="@dimen/standard"
+			android:background="@color/black"/>
+
+		<LinearLayout
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="@dimen/narrow"
+			android:layout_marginStart="@dimen/narrow"
+			android:layout_weight="1"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/tv_name"
+				fontPath="fonts/lato-bold.ttf"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:ellipsize="end"
+				android:lines="1"
+				android:textColor="@color/black"
+				android:textSize="@dimen/text_medium"
+				tools:text="Samuel Robert"/>
+
+			<TextView
+				android:id="@+id/tv_date"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingBottom="@dimen/thin"
+				android:paddingTop="@dimen/thin"
+				android:textSize="@dimen/text_small"
+				tools:text="14 May 2017"/>
+
+			<TextView
+				android:id="@+id/tv_address"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:drawablePadding="@dimen/small"
+				android:drawableStart="@drawable/ic_location_grey_15dp"
+				android:ellipsize="middle"
+				android:lines="1"
+				android:textSize="@dimen/text_small"
+				tools:text="Sanjaynagar, Bangalore"/>
+		</LinearLayout>
+
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:contentDescription="@string/content_description"
+			android:src="@drawable/ic_arrow_right_grey_15dp"/>
+	</LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white"
+	android:gravity="center"
+	android:orientation="vertical"
+	android:padding="@dimen/medium"
+	tools:ignore="MissingPrefix">
+
+	<TextView
+		fontPath="fonts/lato-bold.ttf"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/sign_up"
+		android:textAllCaps="true"
+		android:textColor="@color/black"
+		android:textSize="@dimen/text_big"/>
+
+	<View
+		android:layout_width="72dp"
+		android:layout_height="@dimen/unit"
+		android:layout_marginTop="@dimen/thin"
+		android:background="@color/black"/>
+
+	<android.support.v7.widget.AppCompatEditText
+		android:id="@+id/et_name"
+		fontPath="fonts/lato-bold.ttf"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/big"
+		android:hint="@string/your_name"
+		android:inputType="textCapWords"
+		android:paddingBottom="@dimen/standard"
+		android:textColorHint="@color/grey_545454"
+		android:textSize="@dimen/text_regular"/>
+
+	<android.support.v7.widget.AppCompatEditText
+		android:id="@+id/et_mobile"
+		fontPath="fonts/lato-bold.ttf"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/standard"
+		android:hint="@string/mobile_number"
+		android:inputType="phone"
+		android:maxLength="10"
+		android:paddingBottom="@dimen/standard"
+		android:textColorHint="@color/grey_545454"
+		android:textSize="@dimen/text_regular"/>
+
+	<android.support.v7.widget.AppCompatEditText
+		android:id="@+id/et_email"
+		fontPath="fonts/lato-bold.ttf"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/standard"
+		android:hint="@string/email_id"
+		android:inputType="textEmailAddress"
+		android:paddingBottom="@dimen/standard"
+		android:textColorHint="@color/grey_545454"
+		android:textSize="@dimen/text_regular"/>
+
+	<android.support.v7.widget.AppCompatEditText
+		android:id="@+id/et_business"
+		fontPath="fonts/lato-bold.ttf"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/standard"
+		android:hint="@string/your_business"
+		android:inputType="textCapWords"
+		android:paddingBottom="@dimen/standard"
+		android:textColorHint="@color/grey_545454"
+		android:textSize="@dimen/text_regular"/>
+
+	<android.support.v7.widget.AppCompatEditText
+		android:id="@+id/et_address"
+		fontPath="fonts/lato-bold.ttf"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/standard"
+		android:drawableEnd="@drawable/ic_location_green_15dp"
+		android:drawablePadding="@dimen/standard"
+		android:hint="@string/address"
+		android:inputType="textPostalAddress"
+		android:paddingBottom="@dimen/standard"
+		android:textColorHint="@color/grey_545454"
+		android:textSize="@dimen/text_regular"/>
+
+	<android.support.v7.widget.AppCompatButton
+		android:id="@+id/btn_submit"
+		fontPath="fonts/lato-bold.ttf"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/large"
+		android:background="@drawable/draw_rectangle_green"
+		android:drawablePadding="@dimen/standard"
+		android:text="@string/submit"
+		android:textColor="@color/white"/>
+
+</LinearLayout>

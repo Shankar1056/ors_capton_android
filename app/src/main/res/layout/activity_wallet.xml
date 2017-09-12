@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context="com.bigappcompany.ors_captain.activity.WalletPaymentActivity"
+	tools:ignore="MissingPrefix">
+
+	<android.support.design.widget.AppBarLayout
+		android:id="@+id/appbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/AppTheme.AppBarOverlay">
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="?attr/colorPrimary"
+			app:popupTheme="@style/AppTheme.PopupOverlay"
+			app:titleTextAppearance="@style/ToolbarTitle"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/standard"
+			android:gravity="center"
+			android:text="@string/your_wallet_balance"
+			android:textColor="@color/white"
+			android:textSize="@dimen/text_big"/>
+
+		<android.support.v7.widget.AppCompatButton
+			android:id="@+id/btn_balance"
+			fontPath="fonts/lato-bold.ttf"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginBottom="@dimen/large"
+			android:layout_marginTop="@dimen/medium"
+			android:background="@color/white"
+			android:clickable="false"
+			android:gravity="center"
+			android:paddingEnd="@dimen/large"
+			android:paddingStart="@dimen/large"
+			android:textColor="@color/colorPrimary"
+			android:textSize="@dimen/text_big"
+			tools:text="\u20B9 5000"/>
+	</android.support.design.widget.AppBarLayout>
+
+	<android.support.v7.widget.CardView
+		android:id="@+id/cv_wallet"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/appbar"
+		android:layout_marginEnd="@dimen/standard"
+		android:layout_marginStart="@dimen/standard"
+		android:layout_marginTop="-16dp"
+		app:cardElevation="@dimen/small">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<TextView
+				fontPath="fonts/lato-bold.ttf"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginTop="@dimen/medium"
+				android:text="@string/note"
+				android:textColor="@color/black"
+				android:textSize="@dimen/text_medium"/>
+
+			<View
+				android:layout_width="64dp"
+				android:layout_height="0.5dp"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginTop="@dimen/narrow"
+				android:background="@color/grey_cccccc"/>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/narrow"
+				android:gravity="center"
+				android:paddingEnd="@dimen/standard"
+				android:paddingStart="@dimen/standard"
+				android:text="@string/hint_agent_wallet"/>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="0.5dp"
+				android:layout_marginTop="@dimen/medium"
+				android:background="@color/grey_e0e0e0"/>
+
+			<TextView
+				fontPath="fonts/lato-bold.ttf"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/standard"
+				android:padding="@dimen/standard"
+				android:text="@string/add_amount"
+				android:textColor="@color/black"/>
+
+			<android.support.v7.widget.AppCompatEditText
+				android:id="@+id/et_recharge"
+				fontPath="fonts/lato-bold.ttf"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/big"
+				android:layout_marginEnd="@dimen/standard"
+				android:layout_marginStart="@dimen/standard"
+				android:background="@drawable/draw_grey_ebebeb"
+				android:gravity="end"
+				android:inputType="number"
+				android:maxLength="7"
+				android:paddingBottom="@dimen/thick"
+				android:paddingEnd="@dimen/standard"
+				android:paddingStart="@dimen/standard"
+				android:paddingTop="@dimen/thick"
+				android:textColor="@color/black"
+				android:textSize="@dimen/text_title"
+				tools:text="\u20B9 400"/>
+		</LinearLayout>
+	</android.support.v7.widget.CardView>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/cv_wallet"
+		android:layout_marginEnd="@dimen/standard"
+		android:layout_marginStart="@dimen/standard"
+		android:layout_marginTop="@dimen/medium"
+		android:orientation="horizontal">
+
+		<TextView
+			android:id="@+id/tv_speed_0"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@drawable/draw_border_green"
+			android:gravity="center"
+			android:paddingBottom="@dimen/narrow"
+			android:paddingTop="@dimen/narrow"
+			android:tag="300"
+			android:text="@string/rs_300"
+			android:textColor="@color/colorPrimary"/>
+
+		<TextView
+			android:id="@+id/tv_speed_1"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/standard"
+			android:layout_weight="1"
+			android:background="@drawable/draw_border_green"
+			android:gravity="center"
+			android:paddingBottom="@dimen/narrow"
+			android:paddingTop="@dimen/narrow"
+			android:tag="400"
+			android:text="@string/rs_400"
+			android:textColor="@color/colorPrimary"/>
+
+		<TextView
+			android:id="@+id/tv_speed_2"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/standard"
+			android:layout_weight="1"
+			android:background="@drawable/draw_border_green"
+			android:gravity="center"
+			android:paddingBottom="@dimen/narrow"
+			android:paddingTop="@dimen/narrow"
+			android:tag="500"
+			android:text="@string/rs_500"
+			android:textColor="@color/colorPrimary"/>
+
+		<TextView
+			android:id="@+id/tv_speed_3"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/standard"
+			android:layout_weight="1"
+			android:background="@drawable/draw_border_green"
+			android:gravity="center"
+			android:paddingBottom="@dimen/narrow"
+			android:paddingTop="@dimen/narrow"
+			android:tag="600"
+			android:text="@string/rs_600"
+			android:textColor="@color/colorPrimary"/>
+	</LinearLayout>
+
+
+	<android.support.v7.widget.AppCompatButton
+		android:id="@+id/btn_recharge"
+		fontPath="fonts/lato-bold.ttf"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:background="@color/colorPrimary"
+		android:padding="@dimen/standard"
+		android:text="@string/recharge_now"
+		android:textAllCaps="false"
+		android:textColor="@color/white"
+		android:textSize="@dimen/text_medium"/>
+</RelativeLayout>

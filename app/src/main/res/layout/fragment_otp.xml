@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white"
+	android:gravity="center"
+	android:orientation="vertical"
+	android:padding="@dimen/medium">
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:contentDescription="@null"
+		android:src="@drawable/art_otp_verify_200dp"/>
+
+	<com.mukesh.OtpView
+		android:id="@+id/otp_view"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/large"
+		android:inputType="number"
+		android:textColor="@color/black"/>
+
+	<TextView
+		android:id="@+id/tv_resend"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/standard"
+		android:gravity="center"
+		android:textColor="@color/black"
+		android:textSize="@dimen/text_medium"
+		tools:text="@string/resend_otp"/>
+
+	<android.support.v7.widget.AppCompatButton
+		android:id="@+id/btn_submit"
+		fontPath="fonts/lato-bold.ttf"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/large"
+		android:background="@drawable/draw_rectangle_green"
+		android:text="@string/submit"
+		android:textAllCaps="false"
+		android:textColor="@color/white"/>
+</LinearLayout>

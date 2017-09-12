@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/fl_wallet_badge"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:paddingEnd="@dimen/standard">
+
+	<!-- Menu Item Image -->
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="@dimen/thin"
+		android:contentDescription="@null"
+		android:src="@drawable/ic_wallet_white_24dp"/>
+
+	<!-- Badge Count -->
+	<TextView
+		android:id="@+id/tv_wallet_badge"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="top"
+		android:background="@drawable/draw_round_blue"
+		android:elevation="@dimen/thin"
+		android:paddingEnd="@dimen/thin"
+		android:paddingStart="@dimen/thin"
+		android:textColor="@color/white"
+		android:textSize="@dimen/text_tiny"
+		tools:text="1000"/>
+
+</FrameLayout>
